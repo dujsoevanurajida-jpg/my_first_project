@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Семантическая верстка - Кофейный блог</title>
+</head>
+<body>
+<header>
+    <h1>Мир кофе: от зерна до чашки</h1>
+    <p>Погрузитесь в удивительную культуру приготовления любимого напитка</p>
+</header>
+<nav>
+    <ul>
+        <li><a href="#arabica">Арабика</a></li>
+        <li><a href="#robusta">Робуста</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+<main>
+    <article id="arabica" itemscope itemtype="https://schema.org/Article">
+        <header>
+            <h2>Арабика: королева кофе</h2>
+            <time datetime="2024-04-10">10 АПРЕЛЯ 2024</time>
+        </header>
+        <section>
+            <h3>Вкусовой профиль</h3>
+            <p>Арабика славится своей мягкостью, легкой кислинкой и богатым ароматом. Это самый популярный сорт в мире.</p>
+            <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX0VKd92vwLhXfaIGdYQFPdH9a95lmUGj9l_vdtAa5YQ&s=10" alt="Кофейные зерна арабика">
+                    <figcaption>Зерна арабики — основа большинства кофейных блендов</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Выращивание</h3>
+                <p>Арабика растет на больших высотах и требует особого ухода, поэтому ее урожайность ниже, чем у других сортов.</p>       
+            </section>
+            <footer>
+                <p>Автор: Дуйшоева Нурайида</p>
+                <address>Email: student@example.com</address>
+            </footer>
+    </article>
+    <article id="robusta">
+        <h2>Робуста: крепость и бодрость</h2>
+        <p>Откройте для себя мир насыщенного вкуса и высокого содержания кофеина...</p>
+        <details>
+            <summary>Читать далее о Робусте</summary>
+            <p>Робуста часто используется в эспрессо-смесях для создания плотной и устойчивой пенки.</p>
+        </details>
+    </article>
+
+    <section id="about">
+        <h2>О нашем блоге</h2>
+        <p>Мы делимся настоящими историями о фермерах, секретами обжарки и рецептами идеального кофе.</p>
+    </section>
+    <aside>
+        <h3>Популярные сорта</h3>
+        <ul>
+            <li><a href="#ethiopia">Эфиопия</a></li>
+            <li><a href="#colombia">Колумбия</a></li>
+            <li><a href="#brazil">Бразилия</a></li>
+        </ul>
+    </aside>
+
+    <section id="contact">
+        <h2>Подписка на новости</h2>
+        <form action="#" method="post">
+            <label for="user-email">Ваш Email:</label>
+            <input type="email" id="user-email" name="email" required placeholder="mail@example.com">
+            <button type="submit">Подписаться</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Способы заваривания</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Способ</th>
+                    <th>Время</th>
+                    <th>Помол</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Эспрессо</td>
+                    <td>25 сек</td>
+                    <td>Мелкий</td>
+                </tr>
+                <tr>
+                    <td>Френч-пресс</td>
+                    <td>4 мин</td>
+                    <td>Крупный</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Мир кофе. Все права защищены.</p>
+    <nav>
+        <a href="#privacy">Политика конфиденциальности</a> | 
+        <a href="#terms">Условия использования</a>
+    </nav>
+</footer>
+</body>
+</html>
