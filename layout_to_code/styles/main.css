@@ -1,0 +1,257 @@
+/* Базовый контейнер */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === ШАПКА === */
+.header {
+    background-color: var(--bg-light);
+    padding: 20px 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+.nav-link:hover {
+    opacity: 0.7;
+}
+.cta-button {
+    background-color: var(--bg-dark);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px; /* Овальная кнопка */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* === HERO СЕКЦИЯ === */
+.hero {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 колонки */
+    gap: 40px;
+    align-items: center;
+}
+.hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+.hero-title {
+    font-size: 64px; /* Большой заголовок */
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.hero-description {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 400px;
+}
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn-primary {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.btn-primary:hover {
+    background-color: #d14420; /* Чуть темнее при наведении */
+}
+.hero-note {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Оранжевый блок справа */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+.orange-box {
+    background-color: var(--accent);
+    width: 100%;
+    max-width: 352px; /* Размер из Figma */
+    height: 432px;    /* Размер из Figma */
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.orange-box-top, .orange-box-bottom {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.orange-box-letter {
+    font-size: 160px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    margin-top: -20px; /* Небольшая коррекция */
+}
+
+/* === СЕКЦИЯ ПРЕИМУЩЕСТВ === */
+.features {
+    padding: 80px 0;
+    background-color: #fff; /* В макете секция белая */
+}
+.features-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: 500;
+}
+.section-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 24px; /* Отступ из Figma */
+}
+.feature-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    background-color: #fff;
+}
+.feature-number {
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: block;
+}
+.feature-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.feature-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* === ФУТЕР === */
+.footer {
+    background-color: var(--bg-dark);
+    color: #fff;
+    padding: 60px 0 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.footer-text {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+.footer-email {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+.social-links a {
+    font-size: 14px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #fff;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+/* === АДАПТИВНОСТЬ === */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr; /* В одну колонку на планшетах */
+        text-align: center;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .hero-title {
+        font-size: 40px; /* Уменьшаем заголовок на телефонах */
+    }
+    .features-grid {
+        grid-template-columns: 1fr; /* 1 карточка в ряд */
+    }
+    .features-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,13 @@
+:root {
+    --bg-light: #F7F6F2;      
+    --bg-dark: #20211F;        
+    --accent: #EF542D;        
+    --text-main: #20211F;      
+    --border-color: #DADBD4;   
+    --text-muted: #666666;     
+
+    --font-main: 'Inter', sans-serif;
+    
+    /* РАЗМЕРЫ */
+    --container-width: 1200px;
+}

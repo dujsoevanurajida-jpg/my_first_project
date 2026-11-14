@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Верстка по макету</title>
+    <!-- Подключаем шрифт Inter из Google Fonts (как в твоем макете) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Company</a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Главная</a></li>
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#services" class="nav-link">Услуги</a></li>
+                </ul>
+            </nav>
+
+            <button class="cta-button">Связаться ↗</button>
+        </div>
+    </header>
+
+    <!-- Hero-секция -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">НЕЗАВИСИМАЯ ДИЗАЙН-СТУДИЯ</p>
+                <h1 class="hero-title">Придаём идеям сильную форму.</h1>
+                <p class="hero-description">Создаём бренды и цифровые продукты, в которых характер встречается с пользой.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">Обсудить проект ↗</button>
+                    <span class="hero-note">От первой идеи до запуска</span>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="orange-box">
+                    <div class="orange-box-top">COMPANY / DESIGN STUDIO</div>
+                    <div class="orange-box-letter">Aa</div>
+                    <div class="orange-box-bottom">Смысл. Характер.<br>Ничего лишнего.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция преимуществ -->
+    <section class="features" id="services">
+        <div class="container">
+            <div class="features-header">
+                <h2 class="section-title">Преимущества</h2>
+                <p class="section-subtitle">Не просто красиво. Продумано до деталей.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-number">01</span>
+                    <h3 class="feature-title">Сначала — смысл</h3>
+                    <p class="feature-description">Погружаемся в ваш бизнес и аудиторию. Находим идею, которая отражает бренд.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">02</span>
+                    <h3 class="feature-title">Целостный подход</h3>
+                    <p class="feature-description">Собираем стратегию, айдентику и сайт в единую, узнаваемую систему.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-number">03</span>
+                    <h3 class="feature-title">На связи с вами</h3>
+                    <p class="feature-description">Показываем процесс, объясняем решения и вместе доводим до запуска.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Company</a>
+                <p class="footer-text">Хороший проект<br>начинается с разговора.</p>
+            </div>
+            
+            <div class="footer-col">
+                <p class="footer-email">hello@company.example</p>
+                <div class="social-links">
+                    <a href="#">Telegram ↗</a>
+                    <a href="#">Behance ↗</a>
+                    <a href="#">VK ↗</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2024 Company</p>
+            <div class="footer-legal">
+                <a href="#">Политика</a>
+                <a href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
