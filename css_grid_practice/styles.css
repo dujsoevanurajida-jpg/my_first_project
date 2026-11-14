@@ -1,0 +1,166 @@
+/* ===== ЧАСТЬ 2: Создание базовой Grid-сетки ===== */
+.grid-container {
+    display: grid;
+    /* Именованные области */
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "sidebar footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    gap: 0; /* Убираем глобальные промежутки */
+}
+
+/* Стили для header */
+.header {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); /* Свои цвета */
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+    grid-area: header;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Навигация */
+.navigation {
+    background-color: #2b2d42; /* Темный фон */
+    color: white;
+    padding: 1rem;
+    grid-area: nav;
+}
+
+.navigation ul {
+    list-style: none;
+    padding-left: 10px;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #8d99ae; /* Цвет при наведении */
+}
+
+/* Распределение элементов по областям */
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: auto 1fr;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #edf2f4; /* Светлый фон сайдбара */
+    padding: 1.5rem;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* ===== ЧАСТЬ 3: Сложные Grid-макеты ===== */
+
+/* Стили для featured статьи */
+.featured {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Синий градиент */
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Галерея как Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Авто-заполнение */
+    gap: 1.5rem;
+    align-items: start;
+    justify-items: center;
+}
+
+.gallery-item {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); /* Фиолетовый градиент */
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    min-height: 150px;
+    width: 100%;
+}
+
+/* Изменение порядка элементов и выделение */
+.gallery-item:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2; /* Явное указание позиции */
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 2; /* Элемент занимает 2 колонки */
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Оранжевый */
+}
+
+/* Футер как Grid */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background-color: #2b2d42;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-section {
+    background-color: #3e4257;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/*  ЧАСТЬ 4: Продвинутые техники и адаптивность */
+
+/* Медиа-запросы для адаптивности (мобильные устройства) */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "sidebar sidebar"
+            "footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
